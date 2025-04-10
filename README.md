@@ -14,4 +14,5 @@ los Objetivos son:
 7. Mostrar la informacion almacenada cuando se abra la página.
 ```
 Vista previa del index.html (ListaCompras)
-![Index](url)
+![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/SplashScreen.png)
+![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/ListaCompras.png)
