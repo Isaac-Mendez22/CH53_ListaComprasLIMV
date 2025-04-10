@@ -5,6 +5,7 @@ const alertValidacionesTexto = document.getElementById("alertValidacionesTexto")
 const alertValidaciones = document.getElementById("alertValidaciones");
 const tablaListaCompras = document.getElementById("tablaListaCompras");
 const cuerpoTabla = tablaListaCompras.getElementsByTagName("tbody").item(0);
+const btnClear = document.getElementById("btnClear");
 
 const contadorProductos = document.getElementById("contadorProductos");
 const productosTotal = document.getElementById("productosTotal");
@@ -152,3 +153,17 @@ window.addEventListener("load", function(event){
     contadorProductos.innerText = totalEnProductos; //traemos el contador
     productosTotal.innerHTML = totalEnProductos; // llamamos el total de productos al Html
 }); //windoe.addEvenListener load
+
+//Agregar la funcionalidad del botón Limpiar Todo
+//Resumen
+//Tabla
+//campos
+//alerta
+// localStorage
+
+btnClear.addEventListener("click",function(event){
+event.preventDefault();
+localStorage.removeItem("datos","cuerpoTabla","contadorProductos","alertValidaciones","alertValidacionesTexto");
+localStorage.removeItem("resumen");
+window.location.href = "./index.html";
+})
