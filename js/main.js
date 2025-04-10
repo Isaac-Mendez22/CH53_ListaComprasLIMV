@@ -14,6 +14,7 @@ const precioTotal = document.getElementById("precioTotal");
 let cont = 0;
 let costoTotal = 0;
 let totalEnProductos = 0;
+let datos = new Array();//almacena los elementos de la tabla //[]
 
 //funcion para validar la cantidad 
 function validarCantidad(){
@@ -86,6 +87,17 @@ if(isValid){ //si paso la validaciones
                 <td>${txtNumber.value}</td>
                 <td>${precio}</td>
                 </tr>`;
+    
+    let elemento ={
+        "cont" : cont,
+        "nombre" : txtName.value,
+        "cantidad" : txtNumber.value,
+        "precio" : precio
+    };//se cierra elemento
+
+    datos.push(elemento);
+
+    
 
     cuerpoTabla.insertAdjacentHTML("beforeend", row);
     costoTotal += precio * Number(txtNumber.value); // calcula el precio de la variable precio multiplicando con number que es el total de productos
@@ -94,11 +106,49 @@ if(isValid){ //si paso la validaciones
     productosTotal.innerHTML = totalEnProductos; // llamamos el total de productos al Html
     contadorProductos.innerText = cont; //contador pastilla roja
 
+    //se coloca el localStorage despues de las declaraciones anteriores para asi poder obtener los datos necesarios.
+    localStorage.setItem("datos", JSON.stringify(datos));
+    let resumen ={
+        "cont" : cont,
+        "totalEnProductos" : totalEnProductos,
+        "costoTotal" : costoTotal
+    };
+
+    localStorage.setItem("resumen",JSON.stringify(resumen));
+
     // para limpiar en automatico los recuadros
     txtName.value = "";
     txtNumber.value = "";
     txtName.focus();
-
 }//if isValid
-
 });//btnAgregar
+
+
+window.addEventListener("load", function(event){
+    event.preventDefault();
+    if(this.localStorage.getItem("datos") != null){
+    datos = JSON.parse(this.localStorage.getItem("datos")); // esto es un error porque si no he guardado vamos a hacer una traida de null por eso se añade el if
+    }//dato != null
+
+    datos.forEach((d) =>{ //mandamos a traer los datos de la tabla del local storage completando asi el paso 7
+        let row = `<tr>
+            <td>${d.cont}</td>
+            <td>${d.nombre}</td>
+            <td>${d.cantidad}</td>
+            <td>${d.precio}</td>
+        </tr>`;
+        cuerpoTabla.insertAdjacentHTML("beforeend", row);
+    }) //datos forEach
+
+    if(this.localStorage.getItem("resumen") != null){
+        let resumen = JSON.parse(this.localStorage.getItem("resumen"));
+        costoTotal = resumen.costoTotal;
+        totalEnProductos = resumen.totalEnProductos
+        cont = resumen.cont;
+    }//resumen != null
+
+    precioTotal.innerText = "$ " + costoTotal.toFixed(2); //el 2 es por los decimales que acepta
+    totalEnProductos += Number(txtNumber.value); // nos dice el numero de productos
+    contadorProductos.innerText = totalEnProductos; //traemos el contador
+    productosTotal.innerHTML = totalEnProductos; // llamamos el total de productos al Html
+}); //windoe.addEvenListener load
