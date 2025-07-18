@@ -17,6 +17,7 @@ Los Objetivos del ejercicio son:
 6. Almacenar la información en el `localStorage` del navegador.
 7. Mostrar los datos almacenados cuando se abra o reabra la página.
 ```
+```
 ## Tecnologías utlizadas
 
 - HTML 5
@@ -29,9 +30,11 @@ Los Objetivos del ejercicio son:
 vista previa de la aplicación
 
 ### Vista previa del index.html (ListaCompras)
+
 ![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/SplashScreen.png)
 
 ### Lista de compras (aplicación en acción)
+
 ![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/ListaCompras.png)
 
 ### Estado del proyecto
