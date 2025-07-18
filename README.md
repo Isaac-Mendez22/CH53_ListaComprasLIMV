@@ -42,5 +42,5 @@ vista previa de la aplicación
 - Pruebas no incluidas.
 
 ### Autor
-Isaac Méndez.
-Proyecto individual com parte del curso de Generation Cohorte 53 (CH53).
+- Isaac Méndez.
+- Proyecto individual com parte del curso de Generation Cohorte 53 (CH53).
