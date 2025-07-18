@@ -15,7 +15,7 @@ const precioTotal = document.getElementById("precioTotal");
 let cont = 0;
 let costoTotal = 0;
 let totalEnProductos = 0;
-let datos = new Array();//almacena los elementos de la tabla //[]
+let datos = new Array();//almacena los elementos de la tabla en un arreglo //[]
 
 //funcion para validar la cantidad 
 function validarCantidad(){

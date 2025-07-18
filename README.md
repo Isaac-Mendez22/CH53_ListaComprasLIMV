@@ -1,18 +1,43 @@
-# CH53_ListaCompras.
-## Ejercicio de Javascript visto en clase 9 y 10 de Abril de 2025.
+# ListaCompras - CH53.
+## Descripción
 
-### Ejercicio donde dado un programa en HTML tenemos que construir su funcionamiento en JavaScript sin modificar el HTML cumpliendo cada uno de los objetivos.
+Proyecto realizado durante las clases del 9 y 10 de Abril de 2025.
+El objetivo fue desarrollar la lojica JavaScript para una aplicación de lista de compras, **sin modificar el HTML original** provisto.
+
+Se implementaron funciones para agregar productos, validar datos, calcular totales y almacenar la informacion de manera local.
 
 ```
-los Objetivos son:
+Los Objetivos del ejercicio son:
+
 1. Agregar elementos en una tabla.
 2. Validar los informacion de los campos.
-3. Crear un precio por producto al azar.
-4. Realizar las operaciones para conocer el total de elementos.
-5. Realizar las operaciones para conocer el total en costo.
-6. Almacenar la información en el almacenamiento local del navegador.
-7. Mostrar la informacion almacenada cuando se abra la página.
+3. Generar un precio aleatorio por producto.
+4. Calcular el total de productos.
+5. Calcular el costo total de la compra.
+6. Almacenar la información en el `localStorage` del navegador.
+7. Mostrar los datos almacenados cuando se abra o reabra la página.
 ```
-Vista previa del index.html (ListaCompras)
+## Tecnologías utlizadas
+
+- HTML 5
+- CCS3
+- JavaScript (ES6)
+- `localStorage` (almacenamiento local del navegador)
+```
+
+## Capturas de pantalla
+vista previa de la aplicación
+
+### Vista previa del index.html (ListaCompras)
 ![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/SplashScreen.png)
+
+### Lista de compras (aplicación en acción)
 ![Index](https://raw.githubusercontent.com/Isaac-Mendez22/CH53_ListaComprasLIMV/refs/heads/main/img/ListaCompras.png)
+
+### Estado del proyecto
+- Funcional.
+- Pruebas no incluidas.
+
+### Autor
+Isaac Méndez.
+Proyecto individual com parte del curso de Generation Cohorte 53 (CH53).
